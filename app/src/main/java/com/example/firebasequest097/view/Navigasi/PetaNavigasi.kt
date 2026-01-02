@@ -4,7 +4,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.firebasequest097.view.EntrySiswaScreen
+import com.example.firebasequest097.view.HomeScreen
+import com.example.firebasequest097.view.route.DestinasiDetail
+import com.example.firebasequest097.view.route.DestinasiEntry
+import com.example.firebasequest097.view.route.DestinasiHome
 
 @Composable
 fun DataSiswaApp(

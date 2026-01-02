@@ -59,6 +59,7 @@ dependencies {
     // Coroutines Play Services (Agar bisa pakai .await() saat ambil data)
     implementation(libs.kotlinx.coroutines.play.services)
     implementation(libs.androidx.ui)
+    implementation(libs.androidx.compose.foundation)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
