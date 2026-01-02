@@ -38,4 +38,18 @@ class FirebaseRepositorySiswa : RepositorySiswa {
         docRef.set(data).await()
     }
 
+    override suspend fun getSiswaById(id: Long): Siswa {
+        return try {
+            val documentSnapshot = collection.document(id.toString()).get().await()
+            Siswa(
+                id = documentSnapshot.getLong("id")?.toLong() ?: 0L,
+                nama = documentSnapshot.getString("nama") ?: "",
+                alamat = documentSnapshot.getString("alamat") ?: "",
+                telpon = documentSnapshot.getString("telpon") ?: ""
+            )
+        } catch (e: Exception) {
+            Siswa()
+        }
+    }
+
 }
