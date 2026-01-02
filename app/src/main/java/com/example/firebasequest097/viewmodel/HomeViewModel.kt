@@ -4,8 +4,11 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.firebasequest097.modeldata.Siswa
 import com.example.firebasequest097.repositori.RepositorySiswa
+import kotlinx.coroutines.launch
+import java.io.IOException
 
 
 sealed interface StatusUiSiswa {
@@ -20,5 +23,19 @@ class HomeViewModel(private val repositorySiswa: RepositorySiswa) : ViewModel() 
 
     init {
         loadSiswa()
+    }
+
+    fun loadSiswa() {
+        viewModelScope.launch {
+            statusUiSiswa = StatusUiSiswa.Loading
+            statusUiSiswa = try {
+                // Pastikan fungsi di RepositorySiswa bernama getDataSiswa()
+                StatusUiSiswa.Success(repositorySiswa.getDataSiswa())
+            } catch (e: IOException) {
+                StatusUiSiswa.Error
+            } catch (e: Exception) {
+                StatusUiSiswa.Error
+            }
+        }
     }
 }
