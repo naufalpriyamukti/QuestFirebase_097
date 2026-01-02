@@ -4,3 +4,4 @@ Data di database :
 
 Hasil di Android :
 
+<img width="1919" height="1199" alt="Image" src="https://github.com/user-attachments/assets/71963457-06b1-489a-ae10-28a595722023" />
