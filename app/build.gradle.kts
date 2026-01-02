@@ -58,6 +58,7 @@ dependencies {
     implementation(libs.firebase.firestore)
     // Coroutines Play Services (Agar bisa pakai .await() saat ambil data)
     implementation(libs.kotlinx.coroutines.play.services)
+    implementation(libs.androidx.ui)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

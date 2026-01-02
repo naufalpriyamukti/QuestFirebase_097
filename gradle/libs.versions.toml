@@ -12,6 +12,7 @@ navCompose = "2.8.5"
 firebaseBom = "33.7.0"
 googleServices = "4.4.2"
 coroutines = "1.9.0"
+ui = "1.10.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -41,6 +42,7 @@ firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore
 
 # Coroutines (Wajib untuk fungsi .await() di repository)
 kotlinx-coroutines-play-services = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-play-services", version.ref = "coroutines" }
+androidx-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "ui" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
