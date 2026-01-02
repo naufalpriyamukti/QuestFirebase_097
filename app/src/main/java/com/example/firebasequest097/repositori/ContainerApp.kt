@@ -1,5 +1,7 @@
 package com.example.firebasequest097.repositori
 
+import android.app.Application
+
 interface ContainerApp {
     val repositorySiswa: RepositorySiswa
 }
@@ -7,5 +9,13 @@ interface ContainerApp {
 class DefaultContainerApp : ContainerApp {
     override val repositorySiswa: RepositorySiswa by lazy {
         FirebaseRepositorySiswa()
+    }
+}
+
+class AplikasiDataSiswa : Application() {
+    lateinit var container: ContainerApp
+    override fun onCreate() {
+        super.onCreate()
+        this.container = DefaultContainerApp()
     }
 }
