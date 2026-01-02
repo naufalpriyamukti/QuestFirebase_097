@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "180612134956",
+    "project_id": "bapakusuperman-b3ba1",
+    "storage_bucket": "bapakusuperman-b3ba1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:180612134956:android:274ffae789dc58518ab989",
+        "android_client_info": {
+          "package_name": "om.example.firebasequest097"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMyn5oSUTgjfA-VrqljabWl7tJAeetO6M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
