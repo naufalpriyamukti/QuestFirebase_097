@@ -52,4 +52,15 @@ class FirebaseRepositorySiswa : RepositorySiswa {
         }
     }
 
+    override suspend fun updateSiswa(siswa: Siswa) {
+        postDataSiswa(siswa)
+    }
+
+    override suspend fun deleteSiswa(siswa: Siswa) {
+        try {
+            collection.document(siswa.id.toString()).delete().await()
+        } catch (e: Exception) {
+            throw Exception("Gagal menghapus data siswa: ${e.message}")
+        }
+    }
 }
