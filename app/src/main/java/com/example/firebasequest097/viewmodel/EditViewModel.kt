@@ -8,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.firebasequest097.modeldata.DetailSiswa
 import com.example.firebasequest097.modeldata.UIStateSiswa
+import com.example.firebasequest097.modeldata.toDataSiswa
 import com.example.firebasequest097.modeldata.toUiStateSiswa
 import com.example.firebasequest097.repositori.RepositorySiswa
 import com.example.firebasequest097.view.route.DestinasiDetail
@@ -44,7 +45,7 @@ RepositorySiswa
     suspend fun editSatuSiswa(){
         if (validasiInput(uiStateSiswa.detailSiswa)){
             try {
-                repositorySiswa.editSatuSiswa(idSiswa,uiStateSiswa.detailSiswa.toSiswa())
+                repositorySiswa.editSatuSiswa(idSiswa,uiStateSiswa.detailSiswa.toDataSiswa())
                 println("Update Sukses: $idSiswa")
             } catch (e: Exception) {
                 println("Update Error: ${e.message}")
