@@ -15,6 +15,7 @@ import com.example.firebasequest097.view.route.DestinasiEntry
 import com.example.firebasequest097.view.route.DestinasiHome
 import com.example.firebasequest097.view.DetailSiswaScreen
 import com.example.firebasequest097.view.EditSiswaScreen
+import com.example.firebasequest097.view.route.DestinasiEdit
 
 @Composable
 fun DataSiswaApp(
@@ -43,11 +44,13 @@ fun HostNavigasi(
                 }
             )
         }
+
         composable(DestinasiEntry.route) {
             EntrySiswaScreen(
                 navigateBack = { navController.navigate(DestinasiHome.route) }
             )
         }
+
         composable(
             DestinasiDetail.routeWithArgs,
             arguments = listOf(navArgument(DestinasiDetail.itemIdArg) {
@@ -60,6 +63,16 @@ fun HostNavigasi(
                     navigateBack = { navController.navigate(DestinasiHome.route) }
                 )
             }
+        }
+
+        composable(
+            DestinasiEdit.routeWithArgs,
+            arguments = listOf(navArgument(DestinasiEdit.itemIdArg){
+                type= NavType.StringType
+            })
+        ) {
+            EditSiswaScreen(navigateBack = { navController.navigate(DestinasiHome.route) },
+                onNavigateUp = { navController.navigateUp() })
         }
     }
 }
