@@ -13,6 +13,8 @@ import com.example.firebasequest097.view.HomeScreen
 import com.example.firebasequest097.view.route.DestinasiDetail
 import com.example.firebasequest097.view.route.DestinasiEntry
 import com.example.firebasequest097.view.route.DestinasiHome
+import com.example.firebasequest097.view.DetailSiswaScreen
+import com.example.firebasequest097.view.EditSiswaScreen
 
 @Composable
 fun DataSiswaApp(
@@ -55,7 +57,8 @@ fun HostNavigasi(
             {
                 DetailSiswaScreen(
                     navigateToEditItem = { navController.navigate("${DestinasiEdit.route}/$it") },
-                    navigateBack = { navController.navigate(DestinasiHome.route) })
+                    navigateBack = { navController.navigate(DestinasiHome.route) }
+                )
             }
         }
     }
