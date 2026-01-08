@@ -99,7 +99,7 @@ fun HomeBody(
             is StatusUiSiswa.Loading -> LoadingScreen()
             is StatusUiSiswa.Success -> DaftarSiswa(
                 itemSiswa = statusUiSiswa.siswa,
-                onSiswaClick = {onSiswaClick(it.id.toInt())}
+                onSiswaClick = { onSiswaClick(it.id.toString()) }
             )
             is StatusUiSiswa.Error -> ErrorScreen(
                 retryAction,
