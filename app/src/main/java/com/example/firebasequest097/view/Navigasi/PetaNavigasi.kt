@@ -57,13 +57,12 @@ fun HostNavigasi(
                 type = NavType.StringType
             })
         ){
-            {
                 DetailSiswaScreen(
                     navigateToEditItem = { navController.navigate("${DestinasiEdit.route}/$it") },
                     navigateBack = { navController.navigate(DestinasiHome.route) }
                 )
-            }
         }
+
 
         composable(
             DestinasiEdit.routeWithArgs,

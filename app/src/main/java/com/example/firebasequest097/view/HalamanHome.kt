@@ -96,7 +96,7 @@ fun HomeBody(
         modifier = modifier
     ) {
         when (statusUiSiswa) {
-            is StatusUiSiswa.Loading -> LoadingScreen(modifier = modifier.fillMaxSize())
+            is StatusUiSiswa.Loading -> LoadingScreen()
             is StatusUiSiswa.Success -> DaftarSiswa(
                 itemSiswa = statusUiSiswa.siswa,
                 onSiswaClick = {onSiswaClick(it.id.toInt())}
