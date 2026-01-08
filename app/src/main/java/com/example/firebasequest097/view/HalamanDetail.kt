@@ -23,6 +23,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -37,6 +38,7 @@ import com.example.firebasequest097.modeldata.Siswa
 import com.example.firebasequest097.view.route.DestinasiDetail
 import com.example.firebasequest097.viewmodel.DetailViewModel
 import com.example.firebasequest097.viewmodel.PenyediaViewModel
+import com.example.firebasequest097.viewmodel.StatusUIDetail
 import kotlinx.coroutines.launch
 
 @OptIn(
